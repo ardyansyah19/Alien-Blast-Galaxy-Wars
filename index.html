@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Perang Antar Galaksi</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<div class="home-wrap">
+  <img class="bg-home" src="assets/BGberanda.png" alt="">
+  <div class="stars-layer"></div>
+
+  <!-- drifting comets for ambience -->
+  <div class="comet comet-a"></div>
+  <div class="comet comet-b"></div>
+
+  <div class="home-scroll">
+
+    <header class="logo-zone">
+      <img class="logo-glow" src="assets/LogoGame.png" alt="Perang Antar Galaksi">
+      <p class="tagline comic-text">Selamatkan galaksi dari serangan alien! 🚀</p>
+    </header>
+
+    <section class="diff-zone">
+      <h2 class="section-title comic-text">Pilih Kesulitan</h2>
+      <div class="diff-row" id="diffRow">
+        <button class="diff-btn" data-diff="easy">
+          <img src="assets/ButtonEasy.png" alt="Easy">
+        </button>
+        <button class="diff-btn" data-diff="medium">
+          <img src="assets/ButtonMedium.png" alt="Medium">
+        </button>
+        <button class="diff-btn" data-diff="hard">
+          <img src="assets/ButtonHard.png" alt="Hard">
+        </button>
+      </div>
+    </section>
+
+    <section class="map-zone">
+      <h2 class="section-title comic-text">Pilih Misi Petualanganmu</h2>
+      <p class="map-hint">Taklukkan planet satu demi satu untuk membuka petualangan baru!</p>
+
+      <div class="star-path" id="starPath">
+        <!-- nodes injected by home.js -->
+      </div>
+    </section>
+
+    <footer class="home-footer">
+      <p>Dibuat dengan ❤ untuk penjelajah galaksi kecil</p>
+    </footer>
+  </div>
+</div>
+
+<!-- Mission intro modal -->
+<div class="modal-backdrop" id="missionModal">
+  <div class="modal-card">
+    <img id="modalPlanet" class="modal-planet" src="" alt="">
+    <h3 id="modalTitle" class="comic-text">MISI</h3>
+    <p id="modalDesc" class="modal-desc"></p>
+    <div class="modal-stars" id="modalStars"></div>
+    <div class="modal-actions">
+      <button class="comic-btn btn-secondary" id="modalCancel">Batal</button>
+      <button class="comic-btn btn-primary" id="modalGo">Mulai! 🚀</button>
+    </div>
+  </div>
+</div>
+
+<script src="home.js"></script>
+</body>
+</html>

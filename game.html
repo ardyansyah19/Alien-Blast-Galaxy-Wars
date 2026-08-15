@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Perang Antar Galaksi — Misi</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+<div class="game-wrap" id="gameWrap">
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- ===== HUD ===== -->
+  <div class="hud-top">
+    <button class="hud-btn" id="btnBack">✕</button>
+    <div class="hud-level" id="hudLevel">MISI 1</div>
+    <button class="hud-btn" id="btnPause">❚❚</button>
+  </div>
+
+  <div class="hud-mid">
+    <div class="lives" id="hudLives"></div>
+    <div class="progress-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-label" id="progressLabel">0 / 10</div>
+    </div>
+    <div class="score" id="hudScore">⭐ 0</div>
+  </div>
+
+  <!-- ===== Overlays ===== -->
+  <div class="overlay" id="readyOverlay">
+    <div class="overlay-card">
+      <img id="readyPlanet" class="overlay-planet" src="" alt="">
+      <h2 id="readyTitle" class="comic-text">MISI 1</h2>
+      <p id="readyDesc" class="overlay-desc"></p>
+      <p class="overlay-tip">👆 Geser jarimu untuk menggerakkan pesawat.<br>Pesawatmu akan menembak otomatis!</p>
+      <button class="comic-btn btn-primary big" id="btnStart">MULAI! 🚀</button>
+    </div>
+  </div>
+
+  <div class="overlay hidden" id="pauseOverlay">
+    <div class="overlay-card">
+      <h2 class="comic-text">JEDA</h2>
+      <div class="modal-actions col">
+        <button class="comic-btn btn-primary" id="btnResume">Lanjutkan</button>
+        <button class="comic-btn btn-secondary" id="btnPauseMenu">Menu Utama</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay hidden" id="winOverlay">
+    <div class="overlay-card">
+      <h2 class="comic-text win-title">HEBAT!</h2>
+      <p class="overlay-desc" id="winDesc">Planet berhasil diselamatkan!</p>
+      <div class="win-stars" id="winStars">☆☆☆</div>
+      <div class="modal-actions col">
+        <button class="comic-btn btn-primary" id="btnNext">Misi Berikutnya ➜</button>
+        <button class="comic-btn btn-secondary" id="btnReplayWin">Main Lagi</button>
+        <button class="comic-btn btn-ghost" id="btnMenuWin">Menu Utama</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay hidden" id="loseOverlay">
+    <div class="overlay-card">
+      <h2 class="comic-text lose-title">YAH, COBA LAGI!</h2>
+      <p class="overlay-desc">Alien terlalu kuat, tapi jangan menyerah!</p>
+      <div class="modal-actions col">
+        <button class="comic-btn btn-primary" id="btnRetry">Coba Lagi</button>
+        <button class="comic-btn btn-ghost" id="btnMenuLose">Menu Utama</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
