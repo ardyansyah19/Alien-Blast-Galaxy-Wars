@@ -96,6 +96,36 @@ function openMission(id) {
   modalStars.textContent = starString(starsData[id]);
   modal.classList.add('show');
 }
+
+function openMission(id) {
+  pendingLevel = id;
+  const lv = LEVELS.find(l => l.id === id);
+  modalPlanet.src = `assets/planet${id}.png`;
+  modalTitle.textContent = `MISI ${id}: ${lv.name.toUpperCase()}`;
+  modalDesc.textContent = lv.desc;
+  modalStars.textContent = starString(starsData[id]);
+  modal.classList.add('show');
+}
+
+function openMission(id) {
+  pendingLevel = id;
+  const lv = LEVELS.find(l => l.id === id);
+  modalPlanet.src = `assets/planet${id}.png`;
+  modalTitle.textContent = `MISI ${id}: ${lv.name.toUpperCase()}`;
+  modalDesc.textContent = lv.desc;
+  modalStars.textContent = starString(starsData[id]);
+  modal.classList.add('show');
+}
+
+function openMission(id) {
+  pendingLevel = id;
+  const lv = LEVELS.find(l => l.id === id);
+  modalPlanet.src = `assets/planet${id}.png`;
+  modalTitle.textContent = `MISI ${id}: ${lv.name.toUpperCase()}`;
+  modalDesc.textContent = lv.desc;
+  modalStars.textContent = starString(starsData[id]);
+  modal.classList.add('show');
+}
 function closeMission() { modal.classList.remove('show'); pendingLevel = null; }
 
 modalCancel.addEventListener('click', closeMission);
