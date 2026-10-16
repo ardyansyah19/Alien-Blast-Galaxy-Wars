@@ -12,6 +12,26 @@
     { id: 6, name: "Marsoid",  desc: "Pertarungan pamungkas! Kalahkan alien terkuat demi galaksi." },
   ];
 
+    // ---------- Level metadata ----------
+  const LEVELS = [
+    { id: 1, name: "Bumi",     desc: "Alien mendarat di Bumi! Jadilah pahlawan pertama." },
+    { id: 2, name: "Verdania", desc: "Planet hutan penuh alien bersembunyi di balik pepohonan raksasa." },
+    { id: 3, name: "Solandra", desc: "Planet yang sangat panas, alien di sini bergerak lebih cepat!" },
+    { id: 4, name: "Jovaris",  desc: "Badai gas beracun menyelimuti planet, tetap waspada!" },
+    { id: 5, name: "Titanor",  desc: "Markas besar pasukan alien. Pertahanan mereka sangat kuat." },
+    { id: 6, name: "Marsoid",  desc: "Pertarungan pamungkas! Kalahkan alien terkuat demi galaksi." },
+  ];
+
+    // ---------- Level metadata ----------
+  const LEVELS = [
+    { id: 1, name: "Bumi",     desc: "Alien mendarat di Bumi! Jadilah pahlawan pertama." },
+    { id: 2, name: "Verdania", desc: "Planet hutan penuh alien bersembunyi di balik pepohonan raksasa." },
+    { id: 3, name: "Solandra", desc: "Planet yang sangat panas, alien di sini bergerak lebih cepat!" },
+    { id: 4, name: "Jovaris",  desc: "Badai gas beracun menyelimuti planet, tetap waspada!" },
+    { id: 5, name: "Titanor",  desc: "Markas besar pasukan alien. Pertahanan mereka sangat kuat." },
+    { id: 6, name: "Marsoid",  desc: "Pertarungan pamungkas! Kalahkan alien terkuat demi galaksi." },
+  ];
+
   // ---------- URL params ----------
   const params = new URLSearchParams(window.location.search);
   let level = Math.min(6, Math.max(1, parseInt(params.get('level') || '1', 10)));
