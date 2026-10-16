@@ -132,6 +132,33 @@
   z-index: 0;
 }
 
+.star-path::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  bottom: 10px;
+  width: 4px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(to bottom, var(--nebula) 0 10px, transparent 10px 20px);
+  opacity: .55;
+  border-radius: 4px;
+  z-index: 0;
+}.star-path::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  bottom: 10px;
+  width: 4px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(to bottom, var(--nebula) 0 10px, transparent 10px 20px);
+  opacity: .55;
+  border-radius: 4px;
+  z-index: 0;
+}
+
+
 .star-node {
   position: relative;
   z-index: 1;
